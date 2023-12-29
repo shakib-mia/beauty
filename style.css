@@ -1,0 +1,82 @@
+@import url("https://fonts.cdnfonts.com/css/ranade");
+/* @import url("./fonts/TuesdayNight-Regular.otf") */
+@import "./excon.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TuesdayNight";
+  src: url("./fonts/TuesdayNight-Regular.otf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  font-family: "Excon-Variable";
+  @apply overflow-x-hidden
+
+  /* @apply bg-secondary-light text-primary !overflow-x-hidden; */;
+}
+
+.container {
+  @apply px-4 xl:px-0 !max-w-[1256px] !mx-auto;
+}
+
+.ranade {
+  font-family: "ranade";
+}
+
+h1 {
+  @apply text-3xl md:text-5xl xl:text-7xl xl:leading-[5.4rem];
+}
+
+h2 {
+  @apply text-2xl md:text-4xl xl:text-[4rem];
+}
+
+h3 {
+  @apply text-xl md:text-2xl xl:text-5xl;
+}
+
+h4 {
+  @apply text-lg md:text-xl xl:text-4xl;
+}
+
+h5 {
+  @apply text-lg xl:text-[1.375rem];
+}
+
+.subheading {
+  font-family: "TuesdayNight";
+}
+
+#nav-check ~ aside ul {
+  @apply absolute md:static h-0 md:h-auto flex flex-col md:flex-row md:justify-end left-0 w-full py-0 md:pb-0 md:pt-0 bg-[#0C111F] md:bg-transparent px-4 xl:px-0 z-0 top-0 transition-all ease-linear duration-200;
+}
+
+#nav-check:checked ~ aside ul {
+  @apply h-auto pt-32 pb-16;
+}
+
+.card {
+  @apply bg-white;
+}
+
+.card h4,
+.card h5 {
+  @apply px-[1.31rem];
+}
+
+#testimonial .owl-dots {
+  @apply hidden;
+}
+
+#video-container {
+  @apply hidden;
+}
+
+#video-check:checked + #video-container {
+  @apply flex;
+}
