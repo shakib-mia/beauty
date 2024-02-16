@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"
     />
   </head>
-  <body class="bg-light-2">
+  <body class="bg-light-2 relative">
     <input type="checkbox" id="video-check" class="hidden" />
     <div
       class="h-screen fixed top-0 left-0 backdrop-blur w-screen z-[999999999] flex justify-center items-center"
@@ -101,7 +101,7 @@
 
     <!-- Header Section -->
     <header
-      class="bg-cover xl:bg-contain bg-no-repeat relative pt-32 pb-16 xl:pt-40 xl:pb-20 md:py-0 md:h-screen text-white bg-dark overflow-hidden"
+      class="bg-cover xl:bg-contain bg-no-repeat relative pt-32 pb-16 md:py-40 xl:pt-40 xl:pb-20 xl:h-screen text-white bg-dark overflow-hidden"
       style="background-image: url(./assets/images/footer-background.png)"
     >
       <div
@@ -165,7 +165,7 @@
       </div>
 
       <div
-        class="fixed bottom-5 right-5 xl:absolute xl:w-screen xl:left-0 flex justify-center xl:bottom-8 z-[999999999999999]"
+        class="fixed bottom-5 right-5 xl:absolute xl:w-screen xl:left-0 flex justify-center xl:bottom-8 z-[999]"
       >
         <img
           src="./assets/icons/cta-button.jpg"
@@ -738,7 +738,7 @@
               </p>
             </aside>
             <aside
-              class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-0 xl:pl-14"
+              class="grid grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-0 xl:pl-14"
             >
               <div class="flex flex-col gap-4">
                 <h6 class="text-lg font-medium text-[#CAC7EE]">About</h6>
@@ -817,7 +817,13 @@
             class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-16 lg:mt-32 justify-center gap-3 md:gap-0"
           >
             <p class="text-sm opacity-80 text-center xl:text-left">
-              Design Copyright @ Kartik Bansal 2022. All Rights Reserved.
+              Design Copyright @<a
+                href="https://www.figma.com/file/5Qocnzgr3m9770W0Z1nPHy/Landing-Page-UI-Kit-(Community)?type=design&node-id=530-160&mode=design&t=MJg51eR5h6et28tA-0"
+                class="underline hover:no-underline"
+                target="_blank"
+                >Kartik Bansal</a
+              >
+              2022. All Rights Reserved.
             </p>
 
             <ul
@@ -828,7 +834,12 @@
             </ul>
 
             <p class="text-sm opacity-80 text-center xl:text-left">
-              Development Copyright @<a href="https://raddito.com/">Raddito</a>
+              Development Copyright @<a
+                class="underline hover:no-underline"
+                href="https://raddito.com/"
+                target="_blank"
+                >Raddito</a
+              >
               &nbsp; <span id="dev-year"></span>. All Rights Reserved.
             </p>
           </div>
