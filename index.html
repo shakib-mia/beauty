@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauty</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
@@ -14,7 +15,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-light-2">
     <input type="checkbox" id="video-check" class="hidden" />
@@ -28,10 +28,11 @@
         <label
           class="absolute -top-10 right-0 xl:-top-20 xl:-right-8 text-3xl text-white cursor-pointer"
           for="video-check"
+          onclick="toggleVideoPlayback()"
         >
           &times;
         </label>
-        <video
+        <!-- <video
           src="./assets/videos/pexels-tima-miroshnichenko-6763091 (2160p).mp4"
           class="rounded"
           controls
@@ -44,13 +45,22 @@
             target="_blank"
             >Tima Miroshnichenko</a
           >:
-        </p>
+        </p> -->
+
+        <iframe
+          src="https://www.youtube.com/embed/-FnrCZJw6TE?si=2tJLoOn0FfoRnzYl"
+          title="YouTube video player"
+          class="w-full aspect-[16/9]"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
     <!-- navbar section -->
     <nav
-      class="grid grid-cols-2 w-full absolute top-0 left-0 right-0 mx-auto container justify-center py-12 text-white z-10"
+      class="grid grid-cols-2 w-full absolute top-0 left-0 right-0 mx-auto container justify-center py-6 xl:py-12 text-white z-10"
     >
       <input type="checkbox" class="absolute hidden" id="nav-check" />
 
@@ -91,22 +101,36 @@
 
     <!-- Header Section -->
     <header
-      class="bg-cover xl:bg-contain bg-no-repeat relative pt-40 pb-20 md:py-0 md:h-screen text-white bg-dark overflow-hidden"
+      class="bg-cover xl:bg-contain bg-no-repeat relative pt-32 pb-16 xl:pt-40 xl:pb-20 md:py-0 md:h-screen text-white bg-dark overflow-hidden"
       style="background-image: url(./assets/images/footer-background.png)"
     >
       <div
         class="container grid grid-cols-1 xl:grid-cols-2 md:items-center md:h-full"
       >
         <aside class="xl:pr-24">
-          <h1 class="font-bold ranade">
+          <h1
+            class="font-bold ranade"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
             We believe well-being is for everyone
           </h1>
-          <p class="py-12 text-base opacity-80 font-medium text-[#F1F1E6] mr-3">
+          <p
+            class="py-12 text-base opacity-80 font-medium text-[#F1F1E6] mr-3"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
             Your skin barrier may need some extra love. Look no further than our
             first ever bundle that’s dedicated to supporting your skin barrier.
           </p>
 
-          <div class="flex gap-4 md:gap-8 xl:gap-16 items-center">
+          <div
+            class="flex gap-4 md:gap-8 xl:gap-16 items-center"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
             <button
               class="py-2 pr-2 pl-5 bg-[#CAC7EE] text-primary backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
             >
@@ -141,11 +165,11 @@
       </div>
 
       <div
-        class="fixed bottom-2 right-2 xl:absolute xl:w-screen xl:left-0 flex justify-center xl:bottom-8 z-10"
+        class="fixed bottom-5 right-5 xl:absolute xl:w-screen xl:left-0 flex justify-center xl:bottom-8 z-[999999999999999]"
       >
         <img
           src="./assets/icons/cta-button.jpg"
-          class="rounded-full w-14 md:w-14 xl:w-28 cursor-pointer"
+          class="rounded-full w-20 md:w-14 xl:w-28 cursor-pointer"
           alt=""
           id="scroll-image"
         />
@@ -154,14 +178,31 @@
 
     <main>
       <!-- Products Section -->
-      <section class="py-36 container">
-        <h1 class="subheading text-secondary">Products</h1>
-        <h2 class="text-secondary font-bold ranade mt-4">
+      <section class="py-16 xl:py-36 container">
+        <h1
+          class="subheading text-secondary"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          Products
+        </h1>
+        <h2
+          class="text-secondary font-bold ranade mt-4"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
           Our Featured Products
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
-          <div class="bg-white relative">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10 xl:mt-16"
+        >
+          <div
+            class="bg-white relative"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+          >
             <img
               src="./assets/images/product1.png"
               alt="product1"
@@ -184,7 +225,12 @@
               <h5 class="font-medium mt-5">Moisturizer</h5>
             </div>
           </div>
-          <div class="bg-white relative">
+          <div
+            class="bg-white relative"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
             <img
               src="./assets/images/product2.png"
               alt="product2"
@@ -207,7 +253,12 @@
               <h5 class="font-medium mt-5">Moisturizer</h5>
             </div>
           </div>
-          <div class="bg-white relative">
+          <div
+            class="bg-white relative"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+            data-aos-delay="1000"
+          >
             <img
               src="./assets/images/product3.png"
               alt="product3"
@@ -235,21 +286,40 @@
 
       <!-- Features Section -->
       <section class="bg-white">
-        <div class="container py-24">
+        <div class="container py-16 xl:py-24">
           <div
             class="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-0 items-center"
           >
             <aside>
-              <h1 class="subheading text-secondary">Features</h1>
-              <h2 class="ranade font-bold xl:leading-[5.6rem] capitalize">
+              <h1
+                class="subheading text-secondary"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+              >
+                Features
+              </h1>
+              <h2
+                class="ranade font-bold xl:leading-[5.6rem] capitalize"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="500"
+              >
                 Innovation-led products
               </h2>
-              <p class="text-lg text-secondary mb-10 md:w-9/12">
+              <p
+                class="text-lg text-secondary mb-10 md:w-9/12"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="1000"
+              >
                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                 necessitatibus saepe eveniet ut et voluptates repudiandae sint.
               </p>
               <button
                 class="py-2 pr-2 pl-5 bg-secondary text-white backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="300"
               >
                 KNOW MORE
                 <div
@@ -264,7 +334,11 @@
               </button>
             </aside>
 
-            <aside>
+            <aside
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-duration="600"
+            >
               <img src="./assets/images/feature.jpg" alt="" />
             </aside>
           </div>
@@ -272,9 +346,20 @@
       </section>
 
       <!-- Skincare Section -->
-      <section class="container py-[9.37rem]">
-        <h1 class="subheading text-secondary">Skincare</h1>
-        <h2 class="font-bold ranade xl:leading-[5.6rem] w-8/12 capitalize">
+      <section class="container py-16 xl:py-[9.37rem]">
+        <h1
+          class="subheading text-secondary"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          Skincare
+        </h1>
+        <h2
+          class="font-bold ranade xl:leading-[5.6rem] xl:w-8/12 capitalize mt-2 xl:mt-0"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="1000"
+        >
           We provide high quality cosmetic products.
         </h2>
 
@@ -285,23 +370,60 @@
             src="./assets/images/skincare.png"
             alt="skincare"
             class="relative xl:-left-10"
+            data-aos="fade-right"
+            data-aos-duration="1500"
           />
 
           <aside>
-            <h3 class="ranade font-bold">Full-service skincare starts here</h3>
-            <p class="mt-[0.63rem] mb-[1.88rem] text-secondary">
+            <h3
+              class="ranade font-bold"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              Full-service skincare starts here
+            </h3>
+            <p
+              class="mt-[0.63rem] mb-[1.88rem] text-secondary"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
               Personalized by experts for clinically-proven results
             </p>
-            <h4 class="font-medium mb-3">$399</h4>
-            <h5 class="text-secondary mb-7">Special Price</h5>
-            <p class="text-secondary text-base xl:w-8/12">
+            <h4
+              class="font-medium mb-3"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="1000"
+            >
+              $399
+            </h4>
+            <h5
+              class="text-secondary mb-7"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="1500"
+            >
+              Special Price
+            </h5>
+            <p
+              class="text-secondary text-base xl:w-8/12"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="2000"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam, purus sit amet luctus venenatis, lectus magna
             </p>
 
-            <div class="flex gap-9 mt-12">
+            <div
+              class="flex gap-2 xl:gap-9 mt-12"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="2500"
+            >
               <button
-                class="py-2 pr-2 pl-5 bg-secondary text-white backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
+                class="py-2 pr-2 pl-3 xl:pl-5 bg-secondary text-white backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
               >
                 SHOP NOW
                 <div
@@ -325,9 +447,14 @@
       </section>
 
       <!-- Testimonial Section -->
-      <section class="py-[9.37rem] bg-white relative">
+      <section class="py-16 xl:py-[9.37rem] bg-white relative">
         <div class="container flex xl:gap-12 relative z-[99999999]">
-          <div class="w-0 xl:w-1/3">
+          <div
+            class="w-0 xl:w-1/3"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-duration="1000"
+          >
             <img
               src="./assets/images/testimonial.jpg"
               alt="Testimonial"
@@ -335,12 +462,18 @@
             />
           </div>
 
-          <div class="w-full xl:w-2/3 pb-4 relative pt-12" id="testimonial">
+          <div
+            class="w-full xl:w-2/3 pb-4 relative pt-4 xl:pt-12"
+            id="testimonial"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
             <div class="flex justify-between">
               <h3 class="font-bold ranade">Testimonial</h3>
               <div class="flex gap-5">
                 <button
-                  class="w-14 h-14 flex items-center justify-center border border-primary rounded-full group hover:bg-primary transition"
+                  class="w-14 h-14 flex items-center justify-center border border-primary rounded-full group hover:bg-primary transition z-[9999]"
                   id="testimonial-prev"
                 >
                   <svg
@@ -359,7 +492,7 @@
                   </svg>
                 </button>
                 <button
-                  class="w-14 h-14 flex items-center justify-center border border-primary rounded-full group hover:bg-primary transition rotate-180"
+                  class="w-14 h-14 flex items-center justify-center border border-primary rounded-full group hover:bg-primary transition rotate-180 z-[9999]"
                   id="testimonial-next"
                 >
                   <svg
@@ -383,14 +516,125 @@
             <!-- Testimonial Slider -->
             <div class="bg-white relative">
               <div
-                class="bg-secondary w-48 h-48 absolute z-0 xl:-bottom-[21rem] xl:-right-6 opacity-0 xl:opacity-100"
+                class="bg-secondary w-48 h-48 absolute z-0 xl:top-40 xl:-right-4 2xl:-right-12 opacity-0 xl:opacity-100"
               ></div>
-              <div
+
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div
+                      class="item w-full mt-10 mr3"
+                      style="
+                        box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08);
+                      "
+                    >
+                      <div
+                        class="bg-white px-5 py-3 xl:py-12 xl:px-20 border-[#000] border-l-[0.75rem]"
+                      >
+                        <h6
+                          class="text-xl md:text-2xl xl:text-[1.75rem] font-medium ranade"
+                        >
+                          Stephanie Melcher
+                        </h6>
+                        <p
+                          class="text-xs md:text-sm xl:text-base text-secondary font-bold ranade mt-2"
+                        >
+                          Senior Accountant
+                        </p>
+                        <p
+                          class="text-sm md:text-base xl:text-xl text-secondary mt-6"
+                        >
+                          The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters, as
+                          opposed to using letters Ipsum is that it has a
+                          more-or-less normal distribution of letter.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="item w-full mt-10 mr3"
+                      style="
+                        box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08);
+                      "
+                    >
+                      <div
+                        class="bg-white px-5 py-3 xl:py-12 xl:px-20 border-[#000] border-l-[0.75rem]"
+                      >
+                        <h6
+                          class="text-xl md:text-2xl xl:text-[1.75rem] font-medium ranade"
+                        >
+                          Stephanie Melcher
+                        </h6>
+                        <p
+                          class="text-xs md:text-sm xl:text-base text-secondary font-bold ranade mt-2"
+                        >
+                          Senior Accountant
+                        </p>
+                        <p
+                          class="text-sm md:text-base xl:text-xl text-secondary mt-6"
+                        >
+                          The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters, as
+                          opposed to using letters Ipsum is that it has a
+                          more-or-less normal distribution of letter.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="item w-full mt-10 mr3"
+                      style="
+                        box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08);
+                      "
+                    >
+                      <div
+                        class="bg-white px-5 py-3 xl:py-12 xl:px-20 border-[#000] border-l-[0.75rem]"
+                      >
+                        <h6
+                          class="text-xl md:text-2xl xl:text-[1.75rem] font-medium ranade"
+                        >
+                          Stephanie Melcher
+                        </h6>
+                        <p
+                          class="text-xs md:text-sm xl:text-base text-secondary font-bold ranade mt-2"
+                        >
+                          Senior Accountant
+                        </p>
+                        <p
+                          class="text-sm md:text-base xl:text-xl text-secondary mt-6"
+                        >
+                          The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters, as
+                          opposed to using letters Ipsum is that it has a
+                          more-or-less normal distribution of letter.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev !hidden"></div>
+                <div class="swiper-button-next !hidden"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+
+              <!-- <div
                 class="owl-carousel bg-transparent absolute right-0"
                 id="testmonial-slide"
               >
                 <div
-                  class="item w-full mt-10"
+                  class="item w-full mt-10 mr3"
                   style="box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08)"
                 >
                   <div
@@ -418,7 +662,7 @@
                 </div>
 
                 <div
-                  class="item w-full mt-10"
+                  class="item w-full mt-10 mr3"
                   style="box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08)"
                 >
                   <div
@@ -446,7 +690,7 @@
                 </div>
 
                 <div
-                  class="item w-full mt-10"
+                  class="item w-full mt-10 mr3"
                   style="box-shadow: 6px 1px 12px 0px rgba(71, 68, 68, 0.08)"
                 >
                   <div
@@ -472,7 +716,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -480,14 +724,14 @@
 
       <!-- Footer Section -->
       <footer
-        class="bg-dark bg-cover xl:bg-[size:120%] pt-28 bg-no-repeat pb-12 text-white"
+        class="bg-dark bg-cover xl:bg-[size:120%] pt-14 xl:pt-28 bg-no-repeat pb-12 text-white"
         style="background-image: url(/assets/images/footer-background.png)"
       >
         <div class="container">
           <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-0">
             <aside>
               <h6 class="text-2xl font-bold ranade">BEAUTY</h6>
-              <p class="w-3/5 text-sm mt-8 opacity-80">
+              <p class="w-11/12 xl:w-3/5 text-sm mt-8 opacity-80">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
                 aliquam, purus sit amet luctus venenatis, lectus magna fringilla
                 urna, porttitor
@@ -572,28 +816,35 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-16 lg:mt-32 justify-center gap-3 md:gap-0"
           >
-            <p class="text-base opacity-80 text-center">
-              Copyright @ Kartik Bansal 2022. All Rights Reserved.
+            <p class="text-sm opacity-80 text-center xl:text-left">
+              Design Copyright @ Kartik Bansal 2022. All Rights Reserved.
             </p>
 
-            <ul class="flex gap-4 justify-center opacity-80 font-bold text">
+            <ul
+              class="flex gap-4 justify-center opacity-80 font-bold text-sm xl:text-base"
+            >
               <li><a href="#">Terms & Conditions</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
 
-            <p class="text-base opacity-80 flex justify-center">
-              Copyright @ <a href="https://raddito.com/">Raddito</a> &nbsp;
-              <span id="dev-year"></span>. All Rights Reserved.
+            <p class="text-sm opacity-80 text-center xl:text-left">
+              Development Copyright @<a href="https://raddito.com/">Raddito</a>
+              &nbsp; <span id="dev-year"></span>. All Rights Reserved.
             </p>
           </div>
         </div>
       </footer>
     </main>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="/main.js"></script>
     <script type="module" src="./js/handleSlider.js"></script>
+    <script>
+      function toggleVideoPlayback() {
+        window.location.reload();
+      }
+    </script>
   </body>
 </html>

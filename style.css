@@ -80,3 +80,7 @@ h5 {
 #video-check:checked + #video-container {
   @apply flex;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
