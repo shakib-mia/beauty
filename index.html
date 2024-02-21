@@ -44,24 +44,30 @@
       <aside class="flex justify-between items-center xl:pr-16">
         <a href="#" class="ranade text-2xl font-bold z-10">BEAUTY</a>
         <ul class="gap-10 text-lg font-medium overflow-hidden">
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Learn</a></li>
+          <li class="opacity-80 hover:opacity-100"><a href="#">Shop</a></li>
+          <li class="opacity-80 hover:opacity-100"><a href="#">About</a></li>
+          <li class="opacity-80 hover:opacity-100"><a href="#">Learn</a></li>
         </ul>
       </aside>
       <aside class="hidden md:flex ml-auto">
         <button
-          class="py-2 pr-2 pl-5 bg-[#00000080] backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
+          class="py-2 pr-2 pl-5 bg-[#00000080] border-transparent hover:text-[#00000080] hover:border-[#00000080] border-2 hover:bg-transparent rounded-full flex gap-[0.88rem] items-center ranade group duration-200"
         >
           Get Started
           <div
-            class="w-8 h-8 bg-white flex items-center justify-center rounded-full"
+            class="w-8 h-8 bg-white flex items-center justify-center rounded-full group-hover:bg-[#00000080] text-5xl text-secondary"
           >
-            <img
+            <!-- <img
               src="./assets/icons/chevron-circle-black.svg"
               alt="arrow white"
               class="w-6 h-6"
-            />
+            /> -->
+
+            <span
+              class="relative top-[-10%] group-hover:text-white duration-200"
+            >
+              &rsaquo;
+            </span>
           </div>
         </button>
       </aside>
@@ -109,23 +115,29 @@
             data-aos-delay="300"
           >
             <button
-              class="py-2 pr-2 pl-5 bg-[#CAC7EE] text-primary backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade"
+              class="py-2 pr-2 pl-5 bg-[#CAC7EE] border-2 border-[#CAC7EE] hover:bg-transparent hover:text-[#CAC7EE] text-primary backdrop-blur-[50px] rounded-full flex gap-[0.88rem] items-center ranade group duration-500"
             >
               Shop Now
               <div
-                class="w-8 h-8 bg-[#494566] flex items-center justify-center rounded-full"
+                class="w-8 h-8 bg-[#494566] group-hover:bg-[#CAC7EE] flex items-center justify-center rounded-full text-[#cac7ee] text-5xl"
               >
-                <img
+                <!-- <img
                   src="./assets/icons/chevron-circle-white.svg"
                   alt="arrow white"
                   class="w-6 h-6"
-                />
+                /> -->
+
+                <span
+                  class="relative top-[-10%] group-hover:text-secondary duration-200"
+                >
+                  &rsaquo;
+                </span>
               </div>
             </button>
 
             <label
               for="video-check"
-              class="flex gap-3 items-center text-lg ranade cursor-pointer"
+              class="flex gap-3 items-center text-lg ranade cursor-pointer hover:underline underline-offset-8"
             >
               <img src="./assets/icons/play-icon.svg" alt="" />
               Get Demo
