@@ -42,7 +42,7 @@ h4 {
 }
 
 h5 {
-  @apply text-lg xl:text-[1.375rem];
+  @apply text-base xl:text-[1.375rem];
 }
 
 .subheading {
@@ -50,11 +50,11 @@ h5 {
 }
 
 #nav-check ~ aside ul {
-  @apply absolute md:static h-0 md:h-auto flex flex-col md:flex-row md:justify-end left-0 w-full py-0 md:pb-0 md:pt-0 bg-[#0C111F] md:bg-transparent px-4 xl:px-0 z-0 top-0 transition-all ease-linear duration-200;
+  @apply absolute md:static h-0 md:h-auto flex flex-col md:flex-row md:justify-end left-0 w-full py-0 md:pb-0 md:pt-0 bg-[#0C111F] md:bg-transparent z-0 top-0 transition-all ease-linear duration-200;
 }
 
 #nav-check:checked ~ aside ul {
-  @apply h-auto pt-32 pb-16;
+  @apply h-auto pt-16 pb-0;
 }
 
 .card {

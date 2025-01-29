@@ -17,7 +17,10 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 document.addEventListener("DOMContentLoaded", function () {
-  AOS.init();
+  AOS.init({
+    once: true,
+    duration: 1000,
+  });
   // Lenis initialization and other code here
 });
 
@@ -47,6 +50,7 @@ const swiper = new Swiper(".swiper", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
   // Navigation arrows
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
